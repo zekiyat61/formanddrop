@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form and Dropdown</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        display: block;
+      }
+      .form-container {
+        background-color: silver;
+        padding: 30px;
+        border-radius: 8px;
+        width: 500px;
+        margin: 20px auto;
+      }
+      .form-container input[type="text"],
+      .form-container select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid white;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .form-container input[type="submit"] {
+        width: 100%;
+        background-color: green;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .form-container input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .form-container label {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 30px;
+    
+      }
+      .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: silver;
+        width: 160px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: silver;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown:hover .dropbtn {
+        background-color: green;
+      }
+      .dropbtn {
+        background-color: rgb(4, 114, 4);
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="Your name.."
+        />
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Your last name.."
+        />
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Eritrea">Eritrea</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <!-- dropdown -->
+    <br />
+
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+      <p>This is a dropdown menu</p>
+    </div>
+  </body>
+</html>
